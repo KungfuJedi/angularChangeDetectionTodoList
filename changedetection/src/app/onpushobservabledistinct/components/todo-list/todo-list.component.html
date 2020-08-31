@@ -1,0 +1,12 @@
+<app-new-todo (add)="onAdd($event)"></app-new-todo>
+
+<app-todo
+  *ngFor="let todo of todos$ | async"
+  [todo]="todo"
+  (remove)="onRemove($event)"
+>
+</app-todo>
+
+<span [hidden]="true">
+  {{ testChangeRendering }}
+</span>

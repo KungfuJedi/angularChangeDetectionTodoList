@@ -12,6 +12,20 @@ const routes: Routes = [
     loadChildren: () =>
       import('./onpush/onpush.module').then((m) => m.OnpushModule),
   },
+  {
+    path: 'observable',
+    loadChildren: () =>
+      import('./onpushobservable/onpushobservable.module').then(
+        (m) => m.OnpushobservableModule
+      ),
+  },
+  {
+    path: 'distinct',
+    loadChildren: () =>
+      import('./onpushobservabledistinct/onpushobservabledistinct.module').then(
+        (m) => m.OnpushobservabledistinctModule
+      ),
+  },
 ];
 
 @NgModule({
